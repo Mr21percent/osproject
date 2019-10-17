@@ -1,0 +1,16 @@
+<url>
+
+django project guide
+<https://docs.djangoproject.com/ko/2.2/intro/install/>
+
+django girls tutorial
+<https://tutorial.djangogirls.org/ko/>
+
+django migration
+<https://wayhome25.github.io/django/2017/03/20/django-ep6-migrations/>
+<https://www.tuwlab.com/ece/26465>
+
+django SQLite DB tutorial
+<https://www.youtube.com/watch?v=UxTwFMZ4r5k>
+
+
