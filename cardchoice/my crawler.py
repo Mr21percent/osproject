@@ -3,9 +3,8 @@ from bs4 import BeautifulSoup
 
 
 
-# 교보문고의 베스트셀러 웹페이지를 가져옵니다.
-
-html = urlopen('http://www.kyobobook.co.kr/bestSellerNew/bestseller.laf')
+html = urlopen('https://gs25.gsretail.com/gscvs/ko/membership-services/gift-certificate')
+# gs 25 제휴카드 홈페이지
 bsObject = BeautifulSoup(html, "html.parser")
 
 
