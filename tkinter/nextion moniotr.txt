@@ -1,0 +1,11 @@
+this is the txt file!!
+I can't push the file to the https://github.com/Mr21percent/osproject/tree/master/tkinter.
+
+so I make this txt file
+https://github.com/itead/Segnix
+enter this site and follow the step!!!
+
+And you can run the nextion monitor...
+
+(But.. I don't know why our nextion monitor is not work.. fuck!)
+I need help..!!!
