@@ -1,16 +1,8 @@
-<url>
+가상환경 실행; call venv\Scripts\activate
+가상환경 종료; deactivate
+프롬프트 종료; exit
 
-django project guide
-<https://docs.djangoproject.com/ko/2.2/intro/install/>
+python위치; C:\Users\gerti\AppData\Local\Programs\Python\Python37-32\Scripts
+django위치; C:\Users\gerti\django\venv\Scripts
 
-django girls tutorial
-<https://tutorial.djangogirls.org/ko/>
-
-django migration
-<https://wayhome25.github.io/django/2017/03/20/django-ep6-migrations/>
-<https://www.tuwlab.com/ece/26465>
-
-django SQLite DB tutorial
-<https://www.youtube.com/watch?v=UxTwFMZ4r5k>
-
-
+virtualenv 가상환경 구현, django 프로젝트 생성 완료
