@@ -1,8 +1,11 @@
 from tkinter import *
 
 def click(key):
-    if key == '\n지우기\n':
+    if key == '지우기':
         entry.delete(0,END)
+    elif key =='확인':
+        get_cost=entry.get()
+        print(get_cost)
     else:
         entry.insert(END,key)
 
@@ -10,8 +13,8 @@ def click(key):
 window = Tk()
 window.title("가계용 단말")
 buttons = [
-    '\n확인\n','\n1\n','\n2\n','\n3\n','\n4\n','\n5\n','\n6\n','\n7\n','\n8\n'
-    ,'\n9\n','\n지우기\n','\n0\n','\n00\n'
+    '확인','1','2','3','4','5','6','7','8'
+    ,'9','지우기','0','00'
     ]
 
 #canvas_1 = Canvas(window, bg = 'grey', width = 700, height = 250) 기본크기.
