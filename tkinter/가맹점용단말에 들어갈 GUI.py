@@ -3,9 +3,6 @@ from tkinter import *
 def click(key):
     if key == '\n지우기\n':
         entry.delete(0,END)
-    elif key == '확인':
-        get_cost=entry.get()
-        print(get_cost)
     else:
         entry.insert(END,key)
 
