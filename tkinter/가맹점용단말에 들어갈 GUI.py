@@ -1,7 +1,7 @@
 from tkinter import *
 
 def click(key):
-    if key == '지우기':
+    if key == '\n지우기\n':
         entry.delete(0,END)
     else:
         entry.insert(END,key)
