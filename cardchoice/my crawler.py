@@ -3,14 +3,21 @@ from bs4 import BeautifulSoup
 
 
 
-html = urlopen('https://gs25.gsretail.com/gscvs/ko/membership-services/gift-certificate')
-# gs 25 제휴카드 홈페이지
-bsObject = BeautifulSoup(html, "html.parser")
+html = urlopen('https://www.ivips.co.kr:7002/benefit/beCard.asp')
+# 빕스 제휴 카드 홈페이지
+bsobj = BeautifulSoup(html, "html.parser")
 
 
-
+name=bsobj.findAll('th',{'scope':"row"})
+get=bsobj.findAll('td',{'class':'ac-txt rline'})
+for x in range(len(name)):
+    print('==============================================================')
+    print(name[x].text,'\n' )
+    print(get[x].text,'\n')
+    print('==============================================================')
+    print('\n \n \n')
 # 책의 상세 웹페이지 주소를 추출하여 리스트에 저장합니다.
-book_page_urls = []
+'''book_page_urls = []
 for cover in bsObject.find_all('div', {'class':'detail'}):
     link = cover.select('a')[0].get('href')
     book_page_urls.append(link)
@@ -34,3 +41,4 @@ for index, book_page_url in enumerate(book_page_urls):
    # https://webnautes.tistory.com/691 코드의 원본 링크
    # https://bigfood.tistory.com/161 코드 참고 할 위치 해설 포함된 곳
    # https://docs.python.org/3.4/library/urllib.html 관련 문법 설치된 곳
+'''
