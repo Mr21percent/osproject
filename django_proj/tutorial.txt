@@ -1,9 +1,0 @@
-django를 위한 virtualenv
-
-가상환경 실행; C:\Users\gerti\django\venv\Scripts> activate
-(venv)뜨면 가상환경 실행 ok
-가상환경 종료; deactivate
-프롬프트 종료; exit
-
-python위치; C:\Users\gerti\AppData\Local\Programs\Python\Python37-32\Scripts
-django위치; C:\Users\gerti\django\venv\Scripts
