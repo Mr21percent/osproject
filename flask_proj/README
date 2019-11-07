@@ -8,5 +8,6 @@ internet address
 
 
 <set terminal python3>
-~$ vi .bashrc   #or  vi .bash_profile
+~$ vi .bashrc
+   (or vi .bash_profile)
 alias python="python3"
