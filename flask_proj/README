@@ -1,0 +1,12 @@
+sudo python osFlask.py
+internet address
+	0.0.0.0:1000/
+	test
+
+	0.0.0.0:1000/test
+	1
+
+
+<set terminal python3>
+~$ vi .bashrc   #or  vi .bash_profile
+alias python="python3"
