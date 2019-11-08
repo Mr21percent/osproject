@@ -1,6 +1,6 @@
 import copy
 
-def where(place):
+def where(place, 가맹점명, 가맹점):
     for i in range(len(가맹점명)):
         if 가맹점명[i]==place:
             return 가맹점[i]
@@ -39,9 +39,10 @@ def doihave(sortedcard,mycard):
     return sortedcard[i][0]
 
 #start
+'''
 imin="편의점"
-ls=card_sort(where(imin),12000)
+ls=card_sort(where(imin, 가맹점명),12000)
 print(ls)
 a=doihave(ls,소지카드)
 print(a)
-
+'''
