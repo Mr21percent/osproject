@@ -1,9 +1,9 @@
 sudo python osFlask.py
 internet address
-	0.0.0.0:1000/
+	https://0.0.0.0:1000/
 	test
 
-	0.0.0.0:1000/test
+	https://0.0.0.0:1000/test
 	1
 
 
