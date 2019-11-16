@@ -1,19 +1,17 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-
-'''
-import requests
-import pymysql
-
-host_name = 
-'''
-
+import mongo_connection
 
 html = urlopen('https://www.ivips.co.kr:7002/benefit/beCard.asp')
 # 빕스 제휴 카드 홈페이지
+'''
 bsobj = BeautifulSoup(html, "html.parser")
+body = bs.body
 
+target = body.find(class_="lst_detaio_t1")
 
+# ...
+'''
 name=bsobj.findAll('th',{'scope':"row"})
 get=bsobj.findAll('td',{'class':'ac-txt rline'})
 detail=bsobj.findAll('ul',{'class':"list01"})
