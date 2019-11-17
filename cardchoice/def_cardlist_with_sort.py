@@ -24,7 +24,7 @@ def card_sort(store, cost):
     x=cost
     for i in range(len(store)):
         if x>=store[i][1]:
-            realcost=eval(store[i][2])
+            realcost=int(eval(store[i][2]))
         else:
             realcost=x
         store[i][3]=realcost

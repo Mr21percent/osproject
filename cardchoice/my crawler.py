@@ -21,11 +21,13 @@ for x in range(len(name)):
     #print(get[x].text,'\n')
     빕스[x][4]=get[x].text+detail[x].text
     for i in range(5,100,5):
-        if str(i) in get[x].text:
+        if str(i)+'%할인' in get[x].text:
+            빕스[x][2]='x*'+str((100-i)/100)
+        if str(i)+'% 할인' in get[x].text:
             빕스[x][2]='x*'+str((100-i)/100)
     #print('==============================================================')
     #print('\n \n \n')
-#print(빕스)
+print(빕스)
 # 홈페이지에서 각각의 할인 정보를 추출하여 추출합니다.
 #%% 데이터 저장 양식
 '''
