@@ -6,10 +6,10 @@ Created on Fri Nov  8 12:08:20 2019
 """
 #%% 저장되어야 하는 데이터
 빕스=[]
-편의점=[]
-가맹점=[빕스, 편의점]
-가맹점명=['빕스', '편의점']
-#%% 뭐냐 그 서버에서 데이터 관리 위한 코드
+올리브영=[]
+가맹점=[빕스, 올리브영]
+가맹점명=['빕스', '올리브영']
+#%% 뭐냐 그 서버에서 데이터 관리 위한 코드 빕스
 # for server i think 웹 크롤링
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
@@ -32,8 +32,31 @@ def vips_card_crawl():
     return 빕스
 
 빕스=vips_card_crawl()
-#print(빕스)
-#for i in
+print(빕스)
+#%% 올리브영
+올리브영=[]
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import copy
+def olive_card_crawl():
+    html = urlopen('https://www.oliveyoung.co.kr/store/main/getCouponList.do')
+    bsobj = BeautifulSoup(html, "html.parser")
+    name=bsobj.findAll('p',{'class':"tit"})
+    get=bsobj.findAll('dl')
+    detail=bsobj.findAll('dl')
+    빕스=[]
+    for i in range(len(name)):
+        올리브영.append([0,0,0,0,0])
+    for x in range(len(name)):
+        올리브영[x][0]=name[x].text.strip('\n \t \r')
+        올리브영[x][4]=get[x].text+detail[x].text
+        for i in range(5,100,5):
+            if str(i) in get[x].text:
+                올리브영[x][2]='x*'+str((100-i)/100)
+    return 올리브영
+
+올리브영=olive_card_crawl()
+print(올리브영)
 #%% 카드를 서버에서 정렬 해주는 코드
 def quick_sort(arr):
     if len(arr) <= 1:
