@@ -1,0 +1,10 @@
+신한 Lady카드,signal4
+삼성 SFC,signal5
+삼성 T-Class Oil,signal6
+삼성 Oil&Save Plus,signal7
+하나 Yes OK Saver,signal9
+홈플러스 하나줄리엣카드,signal10
+하나 줄리엣카드 & Yes 4u shopping,signal11
+KB Star,signal12
+이마트 KB카드,signal13
+CJ ONE 삼성카드,hhh
