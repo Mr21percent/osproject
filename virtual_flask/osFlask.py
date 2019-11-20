@@ -1,12 +1,15 @@
 import os
 from flask import Flask, request, jsonify
+import a
 app = Flask(__name__)
 
 a = 0
 
 @app.route('/')
 def Keyboard():
-    return 'test'
+	a.printf()
+#	print(b)
+    return 'hi'
 
 '''
 @app.route('/test')
