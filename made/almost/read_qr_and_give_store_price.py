@@ -39,24 +39,4 @@ while True:
 price,store=barcodes[0][0].split('##')
 print(price, store)
 
-
-
-global i_have_card
-i_have_card=[['이마트 KB카드', '<결제코드1>'],['삼성 S클래스 카드', '<켤제코드2>']]
-def plus_card(name,signal):
-    for i in range(len(i_have_card)):
-        if name==i_have_card[i][0]:
-            return 0
-    list=[]
-    list.append(name)
-    list.append(signal)
-    i_have_card.append(list)
-
-def rm_card(name):
-    i = 0
-    while i < len(i_have_card) :
-        if(i_have_card[i][0] == name) :
-            i_have_card.pop(i)
-            i -= 1
-        i += 1
-
+#need to send price and store to server
