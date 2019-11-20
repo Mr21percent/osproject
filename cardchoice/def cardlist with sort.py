@@ -1,5 +1,6 @@
 import copy
 
+<<<<<<< HEAD
 
 a=['우리체크', 0 ,'x*0.8',0]
 b=['우리신용', 10000 ,'x-3000.0',0]
@@ -12,6 +13,8 @@ c=['CU·배달의민족 삼성카드 taptap', 1500, 'x-(x//1500)*200',0]
 가맹점=[편의점, 주유소, 스팅]
 x=10000
 
+=======
+>>>>>>> 5260af700a082e7bf629b88f0f4ac6cdbf339c4f
 def where(place):
     for i in range(len(가맹점명)):
         if 가맹점명[i]==place:
@@ -50,10 +53,17 @@ def doihave(sortedcard,mycard):
             break
     return sortedcard[i][0]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5260af700a082e7bf629b88f0f4ac6cdbf339c4f
 #start
 imin="편의점"
 ls=card_sort(where(imin),12000)
 print(ls)
 a=doihave(ls,소지카드)
 print(a)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5260af700a082e7bf629b88f0f4ac6cdbf339c4f

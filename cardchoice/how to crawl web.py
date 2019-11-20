@@ -23,12 +23,10 @@ for index, book_page_url in enumerate(book_page_urls):
     bsObject = BeautifulSoup(html, "html.parser")
     title = bsObject.find('meta', {'property':'rb:itemName'}).get('content')
     author = bsObject.select('span.name a')[0].text
-    image = bsObject.find('meta', {'property':'rb:itemImage'}).get('content')
-    url = bsObject.find('meta', {'property':'rb:itemUrl'}).get('content')
     originalPrice = bsObject.find('meta', {'property': 'rb:originalPrice'}).get('content')
     salePrice = bsObject.find('meta', {'property':'rb:salePrice'}).get('content')
 
-    print(index+1, title, author, image, url, originalPrice, salePrice)
+    print(index+1, title, author, originalPrice, salePrice)
 
 
 
