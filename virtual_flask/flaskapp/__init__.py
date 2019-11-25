@@ -20,4 +20,7 @@ def index():
 	return render_template('')
 
 
-@app.route('/test'
+@app.route('/test')
+def test():
+	return jsonify(hello='world')
+
