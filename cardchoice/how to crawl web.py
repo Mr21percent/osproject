@@ -23,15 +23,13 @@ for index, book_page_url in enumerate(book_page_urls):
     bsObject = BeautifulSoup(html, "html.parser")
     title = bsObject.find('meta', {'property':'rb:itemName'}).get('content')
     author = bsObject.select('span.name a')[0].text
-    image = bsObject.find('meta', {'property':'rb:itemImage'}).get('content')
-    url = bsObject.find('meta', {'property':'rb:itemUrl'}).get('content')
     originalPrice = bsObject.find('meta', {'property': 'rb:originalPrice'}).get('content')
     salePrice = bsObject.find('meta', {'property':'rb:salePrice'}).get('content')
 
-    print(index+1, title, author, image, url, originalPrice, salePrice)
+    print(index+1, title, author, originalPrice, salePrice)
 
 
 
-    https://webnautes.tistory.com/691 코드의 원본 링크
-    https://bigfood.tistory.com/161 코드 참고 할 위치 해설 포함된 곳
-    https://docs.python.org/3.4/library/urllib.html 관련 문법 설치된 곳
+   # https://webnautes.tistory.com/691 코드의 원본 링크
+   # https://bigfood.tistory.com/161 코드 참고 할 위치 해설 포함된 곳
+   # https://docs.python.org/3.4/library/urllib.html 관련 문법 설치된 곳
