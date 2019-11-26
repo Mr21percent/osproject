@@ -1,14 +1,14 @@
 from Tkinter import *
 import qrcode
 global img
-global franchisee_code
-franchisee_code='00000'
+storen=''
 
 def click(key):
     if key == 'del':
         entry.delete(0,END)
     elif key =='check':
-        get_cost=entry.get()+'##'+franchisee_code
+        global storen
+        get_cost=entry.get()+'##'+storen
         print(get_cost)
         img = qrcode.make(get_cost)
         img.save("test.png")
@@ -25,8 +25,9 @@ def create(key):
 
 def re_franchisee_code(key):
     if key == 'override':
+        global storen
         fcode=entry.get()
-        franchisee_code=fcode
+        storen=fcode
         w = Label(window, text=fcode, font="times 20 italic")
         w.grid(column = 1,row =1,rowspan=1)
         
