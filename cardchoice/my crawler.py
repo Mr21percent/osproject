@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 html = urlopen('https://gs25.gsretail.com/gscvs/ko/membership-services/gift-certificate')
 # gs 25 제휴카드 홈페이지
 bsObject = BeautifulSoup(html, "html.parser")
@@ -35,7 +35,7 @@ for index, book_page_url in enumerate(book_page_urls):
    # https://webnautes.tistory.com/691 코드의 원본 링크
    # https://bigfood.tistory.com/161 코드 참고 할 위치 해설 포함된 곳
    # https://docs.python.org/3.4/library/urllib.html 관련 문법 설치된 곳
-=======
+#=======
 html = urlopen('https://www.ivips.co.kr:7002/benefit/beCard.asp')
 # 빕스 제휴 카드 홈페이지
 bsobj = BeautifulSoup(html, "html.parser")
@@ -84,4 +84,4 @@ ls=card_sort(where(imin, 가맹점명, 가맹점),  800000)
 for i in range(len(ls)):
     print(ls[i][0],'\t',ls[i][3])
 print(ls[0][4])
->>>>>>> 5260af700a082e7bf629b88f0f4ac6cdbf339c4f
+#>>>>>>> 5260af700a082e7bf629b88f0f4ac6cdbf339c4f

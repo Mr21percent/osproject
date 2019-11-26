@@ -8,11 +8,13 @@ a = 0
 def Keyboard():
     return 'test'
 
+'''
 @app.route('/test')
 def test():
     global a
     a+=1
     return str(a)
+'''
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port = 1000)
+    app.run(host='0.0.0.0', port = 8000)
