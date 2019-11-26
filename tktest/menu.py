@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from tkinter import *
+from Tkinter import *
 import test, card, read_qr
 
 def mod_menu():

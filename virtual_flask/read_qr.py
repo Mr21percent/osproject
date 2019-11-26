@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # import the necessary packages
 from imutils.video import VideoStream
 from pyzbar import pyzbar
