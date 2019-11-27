@@ -30,7 +30,10 @@ def backc():
     c7["text"]=mci[nu][3]
     
 def makesignal():
-    print(card_signal_data[nu])
+    filename=card_signal_data[nu][1]+'.bin' #data name is saved by <signal1.bin>
+    src='/home/pi/Desktop/signal saved/' #where data saved
+    dir ='/home/pi/Desktop/signal sending/' #where we need to send data
+    shutil.copy(src + filename, dir + filename)
     #need to change to make sigal
     
 mci=[
