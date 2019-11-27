@@ -72,12 +72,12 @@ oriprice=10000
 
 c1 = Label(window,text='추천카드',bg = 'white', width = 40, height = 5)
 c2 = Label(window,text=mci[nu][0],bg = 'white', width = 40, height = 5)
-c3 = Label(window,text=mci[nu][4],bg = 'white', width = 40, height = 5)
+c3 = Label(window,text=mci[nu][4],bg = 'white', width = 40, height = 15, wraplength=200)
 c4 = Label(window,text='원 결제 금액',bg = 'white', width = 20, height = 5)
 c5 = Label(window,text=oriprice, bg = 'white' , width = 20, height = 5)
 c6 = Label(window,text='실 결제 금액', bg = 'white' , width = 20, height = 5)
 c7 = Label(window,text=mci[nu][3], bg = 'white' , width = 20, height = 5)
-c8 = Button(window,text='결제 진행', bg = 'white' , width = 40, height = 20, command = makesignal)
+c8 = Button(window,text='결제 진행', bg = 'white' , width = 40, height = 30, command = makesignal)
 
 
 c1.grid(column = 1, row = 1,columnspan = 2)
