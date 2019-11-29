@@ -9,6 +9,11 @@ import imutils
 import time
 import cv2
 
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+
+
 def readQR():
 	# construct the argument parser and parse the arguments
 	ap = argparse.ArgumentParser()
@@ -67,42 +72,19 @@ def readQR():
 # barcodes[0][0] code for store and price
 
 	price,store=barcodes[0][0].split('##')
-	print(price, store)
+	return price, store
 
 
 # 데이터베이스로 price, store 값 전송
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import db
+def uploadDB(price, store):
+	cred = credentials.Certificate('mykey.json')
+	firebase_admin.initialize_app(cred,{
+	    'databaseURL' : 'https://fbtest-a36f5.firebaseio.com'
+	})
 
-cred = credentials.Certificate('mykey.json')
-firebase_admin.initialize_app(cred,{
-    'databaseURL' : 'https://fbtest-a36f5.firebaseio.com'
-})
+	ref = db.reference('user_raspi') #db 위치 지정
+	ref.update({'price' : price}) #해당 변수가 없으면 생성한다.
+	ref.update({'store' : store}) #해당 변수가 없으면 생성한다.
 
-ref = db.reference('user_raspi') #db 위치 지정
-ref.update({'price' : price}) #해당 변수가 없으면 생성한다.
-ref.update({'store' : store}) #해당 변수가 없으면 생성한다.
-
-
-
-'''
-global i_have_card
-i_have_card=[['이마트 KB카드', '<결제코드1>'],['삼성 S클래스 카드', '<켤제코드2>']]
-def plus_card(name,signal):
-    for i in range(len(i_have_card)):
-        if name==i_have_card[i][0]:
-            return 0
-    list=[]
-    list.append(name)
-    list.append(signal)
-    i_have_card.append(list)
-
-def rm_card(name):
-    i = 0
-    while i < len(i_have_card) :
-        if(i_have_card[i][0] == name) :
-            i_have_card.pop(i)
-            i -= 1
-        i += 1
-'''
+p,s = readQR()
+uploadDB(p,s)
