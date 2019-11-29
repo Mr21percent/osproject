@@ -44,36 +44,34 @@ bsobj = BeautifulSoup(html, "html.parser")
 name=bsobj.findAll('th',{'scope':"row"})
 get=bsobj.findAll('td',{'class':'ac-txt rline'})
 detail=bsobj.findAll('ul',{'class':"list01"})
-빕스=[]
+vips=[]
 for i in range(len(name)):
-    빕스.append([0,0,0,0,0])
+    vips.append([0,0,0,0,0])
 for x in range(len(name)):
-    빕스[x][0]=name[x].text.strip('\n \t \r')
-    빕스[x][4]=get[x].text+detail[x].text
+    vips[x][0]=name[x].text.strip('\n \t \r')
+    vips[x][4]=get[x].text.strip('\n \t \r')+detail[x].text.strip('\n \t \r')
     for i in range(5,100,5):
         if str(i)+'%할인' in get[x].text:
-            빕스[x][2]='x*'+str((100-i)/100)
+            vips[x][2]='x*'+str((100-i)/100)
         if str(i)+'% 할인' in get[x].text:
-            빕스[x][2]='x*'+str((100-i)/100)
+            vips[x][2]='x*'+str((100-i)/100)
 # 홈페이지에서 각각의 할인 정보를 추출하여 추출합니다.
 
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
+print(vips)
+print()
+for i in vips:
+    i[4].lstrip()
+    print('i[4]       ', i[4])
 
-cred = credentials.Certificate("./fbtest-a36f5-firebase-adminsdk-g9u4b-2b258b2506.json")
-firebase_admin.initialize_app(cred)
-db = firestore.client()
+'''
 
-for lst in 빕스:
-	doc_ref = db.collection(u'빕스').document(lst[0])
-	doc_ref.set({
-		u'min' : lst[1],
-		u'수식' : lst[2],
-		u'real_cost' : lst[3],
-		u'설명' : lst[4]
-	})
+fname = 'vips.txt'
+outfile = open(fname, 'w')
 
+sep = ','
+for i in vips:
+    i[4].lstrip()
+    outfile.writelines(i[0] + sep + str(i[1]) + sep + i[2] + sep + str(i[3]) + sep + i[4] + '\n')
 
-		
-print("my_crawler.py complete")
+outfile.close()
+'''

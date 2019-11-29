@@ -3,7 +3,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 import my_crawler
 
-cred = credentials.Certificate("./fbtest-a36f5-firebase-adminsdk-g9u4b-2b258b2506.json")
+cred = credentials.Certificate("")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 '''
