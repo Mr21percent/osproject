@@ -70,6 +70,22 @@ def readQR():
 	print(price, store)
 
 
+# 데이터베이스로 price, store 값 전송
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+
+cred = credentials.Certificate('mykey.json')
+firebase_admin.initialize_app(cred,{
+    'databaseURL' : 'https://fbtest-a36f5.firebaseio.com'
+})
+
+ref = db.reference('user_raspi') #db 위치 지정
+ref.update({'price' : price}) #해당 변수가 없으면 생성한다.
+ref.update({'store' : store}) #해당 변수가 없으면 생성한다.
+
+
+
 '''
 global i_have_card
 i_have_card=[['이마트 KB카드', '<결제코드1>'],['삼성 S클래스 카드', '<켤제코드2>']]
