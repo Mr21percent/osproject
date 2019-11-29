@@ -86,5 +86,3 @@ def uploadDB(price, store):
 	ref.update({'price' : price}) #해당 변수가 없으면 생성한다.
 	ref.update({'store' : store}) #해당 변수가 없으면 생성한다.
 
-p,s = readQR()
-uploadDB(p,s)

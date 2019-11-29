@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from tkinter import *
+from Tkinter import *
 import test, card, read_qr
 
 def mod_menu():
@@ -15,7 +15,8 @@ def mod_menu():
 
 	def b2Click():
 		window_menu.destroy()
-		read_qr.readQR()
+		p,s = read_qr.readQR()
+		read_qr.uploadDB(p,s)
 
 
 	b1 = Button(window_menu, command = b1Click)

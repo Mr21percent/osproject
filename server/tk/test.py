@@ -5,7 +5,7 @@ Created on Wed Nov 20 16:29:02 2019
 @author: woneu
 """
 
-from tkinter import *
+from Tkinter import *
 nu=0
 
 def mod_test():
