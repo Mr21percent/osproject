@@ -15,8 +15,8 @@ def sending_data(personal_card):
 
 #get_from_personal= price, place, card data(edited by sending_data)
 #from this line for server
-가맹점=[빕스]
-가맹점명=['빕스']
+#가맹점=[빕스]
+#가맹점명=['vips']
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -59,7 +59,9 @@ def allin(price,place,concard,가맹점명, 가맹점):
         return '가맹점이 아닙니다.'
     else:
         ls=card_sort(where(place, 가맹점명, 가맹점), price)
-        #print(ls)
+        return ls
+	
+		#print(ls)
         list=[]
         for i in ls:
             if i[0] in concard:
@@ -68,10 +70,11 @@ def allin(price,place,concard,가맹점명, 가맹점):
             return list
         else:
             return '할인 받을 수 있는 카드가 없습니다.'
+
 # 예시
 #main
-price=12000
-place='빕스'
-concard=['CJ ONE 신한카드','하나 Yes OK Saver']
+#price=12000
+#place='빕스'
+#concard=['CJ ONE 신한카드','하나 Yes OK Saver']
 
-print(allin(price,place,concard,가맹점명,가맹점))
+#print(allin(price,place,concard,가맹점명,가맹점))
