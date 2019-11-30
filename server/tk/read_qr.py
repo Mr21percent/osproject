@@ -13,6 +13,11 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
+import webbrowser
+
+def open_web(url):
+	webbrowser.open(url)
+
 
 def readQR():
 	# construct the argument parser and parse the arguments
@@ -85,9 +90,4 @@ def uploadDB(price, store):
 	ref = db.reference('user_raspi') #db 위치 지정
 	ref.update({'price' : price}) #해당 변수가 없으면 생성한다.
 	ref.update({'store' : store}) #해당 변수가 없으면 생성한다.
-
-'''
-def open_readdb():
-'''	
-
 
