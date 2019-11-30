@@ -21,20 +21,31 @@ ref_user = db.reference('user_raspi')
 
 @app.route("/readdb")
 def readdb():
+	# 데이터베이스에서 가맹점에서 받은 price, store 가져옴
 	user_raspi = ref_user.get()
+	# 빕스의 카드 혜택 데이터베이스에서 가져옴
 	빕스 = ref_vips.get()
 	print(user_raspi)
 
+	
 	가맹점 = [빕스]
 	가맹점명 = ['vips']
 
-	#price=12000
-	#place='빕스'
 	concard=['CJ ONE 신한카드', '하나 Yes OK Saver']
 	price = int(user_raspi['price'])
 	store = user_raspi['store']
 	mci = allin(price, store, concard, 가맹점명, 가맹점)
 
+
+	openfile = open("data.txt", 'r')
+
+	rstr = openfile.readlines()
+	for i in range(len(rstr)):
+		rstr[i] = rstr[i].strip().split(',')
+
+	openfile.close()
+	card_signal_data = rstr
+	'''
 	card_signal_data=[
 			   ['CJ ONE 삼성카드', 'signal1'], 
 			['CJ ONE 신한카드', 'signal2'], 
@@ -50,11 +61,11 @@ def readdb():
 		   ['KB Star','signal12'],
 		   ['이마트 KB카드', 'signal13']
 	]
-
+	'''
 	last_tk(mci, price, card_signal_data)
 
 	return 'OK'
-
+	
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port = 8000)

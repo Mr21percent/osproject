@@ -62,7 +62,7 @@ def mod_card():
 				print(data)
 				break
 		if card_in_data == False:
-			text = input("사용자 입력 : ")
+			text = str(input("사용자 입력 : "))
 			data.append([card_name, text])
 			write_txt(filename, data)
 			print("삽입 완료")
