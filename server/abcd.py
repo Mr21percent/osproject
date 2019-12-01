@@ -54,18 +54,14 @@ def do_con_have(sortedcard,mycard):
             break
     return sortedcard[i][0]
 
-def allin(price,place,concard,가맹점명, 가맹점):
+def allin(price,place,가맹점명, 가맹점):
     if where(place, 가맹점명, 가맹점)==-1:
         return '가맹점이 아닙니다.'
     else:
         ls=card_sort(where(place, 가맹점명, 가맹점), price)
         return ls
-	
 		#print(ls)
         list=[]
-        for i in ls:
-            if i[0] in concard:
-                list.append(i)
         if len(list)!=0:
             return list
         else:
