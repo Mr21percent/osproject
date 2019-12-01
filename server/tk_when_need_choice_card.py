@@ -11,11 +11,26 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 
+def mod_card():
+    def read_txt(fname):
+        openfile = open(fname, 'r')
+        rstr = openfile.readlines()
+        for i in range(len(rstr)):
+            rstr[i] = rstr[i].strip().split(',')
+        return rstr
+        openfile.close()
 
+def getting_card():
+    filename = 'data.txt'
+    data = read_txt(filename)
+    data_origin = read_txt('data_origin.txt')
+    for i in data_origin:
+        listbox.insert(END, str(i[0]))
+    F1.pack(side=TOP)
 #print(ls)
 GPIO.setwarnings(False)
 personal_card=[["CJ ONE 삼성카드",'<결제코드1>'],['삼성 S클래스 카드', '<켤제코드2>']]
-def last_tk(oriprice, card_signal_data):
+def last_tk(oriprice, card_signal_data=getting_card()):
 
    # html=urlopen('https://01031800998.localtunnel.me/readdb')
    # bsobj=BeautifulSoup(html,"html.parser")
