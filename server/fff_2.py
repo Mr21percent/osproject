@@ -37,8 +37,8 @@ def readdb():
 	#concard=['CJ ONE 신한카드', '하나 Yes OK Saver']
 	price = int(user_raspi['price'])
 	store = user_raspi['store']
-	mci = allin(price, store, 가맹점명, 가맹점)
-	mci = allin(price, stroe, ['vips'], [빕스])
+#	mci = allin(price, store, 가맹점명, 가맹점)
+	mci = allin(price, store, ['vips'], [빕스])
 
 	openfile = open("data.txt", 'r')
 
