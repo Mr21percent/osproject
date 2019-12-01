@@ -5,8 +5,9 @@ import test, card, read_qr
 
 import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
-global signal
 '''
+global signal
+
 class RFID:
 	def Write(self,T):
 		reader = SimpleMRFC522()
@@ -29,9 +30,9 @@ def mod_menu():
 #	signal = s.Read()
 
 	def b1Click():
-		global signal
+#		global signal
 		window_menu.destroy()
-		card.mod_card(signal)
+		card.mod_card()
 
 	def b2Click():
 		window_menu.destroy()
