@@ -30,9 +30,13 @@ def mod_menu():
 #	signal = s.Read()
 
 	def b1Click():
+<<<<<<< HEAD
 #		global signal
 		window_menu.destroy()
 		card.mod_card()
+=======
+		window_menu.destroy()
+>>>>>>> f576795a01a3128aab13ef5c26cd98ac45011c47
 
 	def b2Click():
 		window_menu.destroy()
