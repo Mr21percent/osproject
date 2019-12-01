@@ -5,7 +5,8 @@ import test, card, read_qr
 
 import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
-
+global signal
+'''
 class RFID:
 	def Write(self,T):
 		reader = SimpleMRFC522()
@@ -17,18 +18,18 @@ class RFID:
 		reader = SimpleMFRC522()
 		id, text = reader.read()
 		return text
-
+'''
 def mod_menu():
 	window_menu = Tk()
 
 	c1 = Canvas(window_menu, bg = 'white', width = 300, height = 60)
 	c2 = Canvas(window_menu, bg = 'white', width = 300, height = 60)
 
-	s = RFID()
-	signal = s.Read()
+#	s = RFID()
+#	signal = s.Read()
 
 	def b1Click():
-		nonlocal signal
+		global signal
 		window_menu.destroy()
 		card.mod_card(signal)
 
