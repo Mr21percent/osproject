@@ -17,6 +17,7 @@ def mod_menu():
 		window_menu.destroy()
 		p,s = read_qr.readQR()
 		read_qr.uploadDB(p,s)
+		read_qr.open_web()
 
 
 	b1 = Button(window_menu, command = b1Click)

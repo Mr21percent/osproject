@@ -15,8 +15,8 @@ from firebase_admin import db
 
 import webbrowser
 
-def open_web(url):
-	webbrowser.open(url)
+def open_web():
+	webbrowser.open("https://youruniquesubdomain.localtunnel.me")
 
 
 def readQR():

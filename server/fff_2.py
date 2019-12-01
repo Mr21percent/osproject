@@ -18,6 +18,9 @@ firebase_admin.initialize_app(options={
 ref_vips = db.reference('빕스')
 ref_user = db.reference('user_raspi')
 
+@app.route("/hi")
+def hi():
+	return 'hi'
 
 @app.route("/readdb")
 def readdb():
