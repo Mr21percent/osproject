@@ -48,13 +48,10 @@ def last_tk(mci, oriprice, card_signal_data):
 			c7["text"]=mci[nu][3]
 
 		def makesignal():
-			filename=card_signal_data[nu][1]+'.bin' #data name is saved by <signal1.bin>
-			src='/home/pi/Desktop/signal saved/' #where data saved
-			dir ='/home/pi/Desktop/signal sending/' #where we need to send data
-			shutil.copy(src + filename, dir + filename)
-			#need to change to make sigal
-
-
+			nonlocal nu
+			k = RFID()
+			k.write(card_signal_datap[nu][1])
+			#write name of card on rfid card
 		# need to get mci from another file and card_signal_data, oriprice
 
 		c1 = Label(window,text='추천카드',bg = 'white', width = 40, height = 5)

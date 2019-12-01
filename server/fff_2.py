@@ -66,7 +66,7 @@ def readdb():
 	]
 	'''
 #	last_tk(mci, price, card_signal_data)
-	'''
+	
 	return str(빕스) 
 	
 

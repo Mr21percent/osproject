@@ -3,7 +3,7 @@
 from Tkinter import *
 import menu
 
-def mod_card():
+def mod_card(signal):
 	def read_txt(fname):
 		openfile = open(fname, 'r')
 
@@ -52,6 +52,7 @@ def mod_card():
 	rightF.pack(side=RIGHT, ipadx="3m", ipady="1m", padx="3m", pady="2m")
 
 	def b1Click():
+		nonlocal signal
 		index = listbox.curselection()[0]
 		card_name = data_origin[index][0]
 		card_in_data = False
@@ -62,7 +63,7 @@ def mod_card():
 				print(data)
 				break
 		if card_in_data == False:
-			text = str(input("사용자 입력 : "))
+			text = signal
 			data.append([card_name, text])
 			write_txt(filename, data)
 			print("삽입 완료")
