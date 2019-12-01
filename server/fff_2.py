@@ -30,7 +30,7 @@ def readdb():
 	빕스 = ref_vips.get()
 	print(user_raspi)
 
-	'''
+	
 	가맹점 = [빕스]
 	가맹점명 = ['vips']
 

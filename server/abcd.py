@@ -55,17 +55,17 @@ def do_con_have(sortedcard,mycard):
     return sortedcard[i][0]
 
 def allin(price,place,가맹점명, 가맹점):
-    if where(place, 가맹점명, 가맹점)==-1:
-        return '가맹점이 아닙니다.'
-    else:
-        ls=card_sort(where(place, 가맹점명, 가맹점), price)
-        return ls
+   # if where(place, 가맹점명, 가맹점)==-1:
+    #    return '가맹점이 아닙니다.'
+   # else:
+    ls=card_sort(where(place, 가맹점명, 가맹점), price)
+    return ls
 		#print(ls)
-        list=[]
-        if len(list)!=0:
-            return list
-        else:
-            return '할인 받을 수 있는 카드가 없습니다.'
+
+
+
+
+
 
 # 예시
 #main
