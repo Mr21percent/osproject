@@ -65,9 +65,9 @@ def readdb():
 		   ['이마트 KB카드', 'signal13']
 	]
 	'''
-	last_tk(mci, price, card_signal_data)
+#	last_tk(mci, price, card_signal_data)
 
-	return 'OK'
+	return str(mci) 
 	
 
 if __name__ == "__main__":
