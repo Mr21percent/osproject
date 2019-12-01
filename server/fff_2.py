@@ -30,15 +30,15 @@ def readdb():
 	빕스 = ref_vips.get()
 	print(user_raspi)
 
-	
+	'''
 	가맹점 = [빕스]
 	가맹점명 = ['vips']
 
 	#concard=['CJ ONE 신한카드', '하나 Yes OK Saver']
 	price = int(user_raspi['price'])
 	store = user_raspi['store']
-#	mci = allin(price, store, 가맹점명, 가맹점)
-	mci = allin(price, store, ['vips'], [빕스])
+	mci = allin(price, store, 가맹점명, 가맹점)
+#	mci = allin(price, store, ['vips'], [빕스])
 
 	openfile = open("data.txt", 'r')
 
@@ -66,8 +66,8 @@ def readdb():
 	]
 	'''
 #	last_tk(mci, price, card_signal_data)
-
-	return str(mci) 
+	'''
+	return str(빕스) 
 	
 
 if __name__ == "__main__":
