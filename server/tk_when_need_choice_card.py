@@ -4,10 +4,23 @@ Created on Wed Nov 20 16:29:02 2019
 @author: woneu
 """
 from tkinter import *
+from urlib.request import urlopen
+from bs4 import BeautifulSoup
 
 #print(ls)
 
-def last_tk(mci, oriprice, card_signal_data):
+def last_tk(oriprice, card_signal_data):
+	html=urlopen('htttps://youruniquesubdomain.localtunnel.me/readdb')
+	bsobj=BeautifulSoup(html, "html.parser")
+	a=str(bsobj)
+	cd=a.split("],[")
+	mci=[]
+	for i in range(len(cd)):
+		k=card[i].split(",")
+		mci.append(k)
+	for x in mci:
+		for y in x:
+			y.replace("'","")
 	concard=[]
 	for i in card_signal_data:
 		concard.append(i[0])
