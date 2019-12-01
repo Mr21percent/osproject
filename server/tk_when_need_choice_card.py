@@ -10,18 +10,16 @@ import RPi.GPIO as GPIO
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-
-def mod_card():
-    def read_txt(fname):
-        openfile = open(fname, 'r')
-        rstr = openfile.readlines()
-        for i in range(len(rstr)):
-            rstr[i] = rstr[i].strip().split(',')
-        return rstr
-        openfile.close()
+def read_txt(fname):
+    openfile = open(fname, 'r')
+    rstr = openfile.readlines()
+    for i in range(len(rstr)):
+        rstr[i] = rstr[i].strip().split(',')
+    return rstr
+    openfile.close()
 
 def getting_card():
-    filename = 'data.txt'
+    filename = '/home/pi/gitproj/osproject/server/data.txt'
     data = read_txt(filename)
     data_origin = read_txt('data_origin.txt')
     for i in data_origin:
