@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-
+import os
 from Tkinter import *
 import test, card, read_qr
-
 import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
 '''
+global signal
+
 class RFID:
 	def Write(self,T):
 		reader = SimpleMRFC522()
@@ -28,6 +29,10 @@ def mod_menu():
 #	signal = s.Read()
 
 	def b1Click():
+#		global signal
+		window_menu.destroy()
+		card.mod_card()
+
 		window_menu.destroy()
 
 	def b2Click():
@@ -35,6 +40,7 @@ def mod_menu():
 		p,s = read_qr.readQR()
 		read_qr.uploadDB(p,s)
 		read_qr.open_web()
+		os.system("python3 tk_when_need_choice_card.py")
 
 
 	b1 = Button(window_menu, command = b1Click)

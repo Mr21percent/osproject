@@ -1,10 +1,9 @@
 """
 Created on Wed Nov 20 16:29:02 2019
-
 @author: woneu
 """
 from tkinter import *
-import SimpleMFRC522
+from mfrc522 import SimpleMFRC522
 import threading
 import RPi.GPIO as GPIO
 from urllib.request import urlopen
@@ -14,7 +13,8 @@ from urllib.request import urlopen
 
 #print(ls)
 GPIO.setwarnings(False)
-
+mci = [['sdfasfd',1231,'x-10',0,'dfaf']]
+oriprice = 1230345
 window = Tk()
 # w = 700 h = 300
 nu=0
@@ -56,7 +56,7 @@ def RFID_READ(SDA,SCK,MOSI,MISO,RST):
                         
 def makesignal():
     global nu
-    k = threading.Thread(target=RFID_WRITE,name="RFID",args=(card_signal_datap[nu][1],24,23,19,21,22))
+    k = threading.Thread(target=RFID_WRITE,name="RFID",args=(mci[nu][0],24,23,19,21,22))
     k.start()
     #write name of card on rfid card
 	# need to get mci from another file and card_signal_data, oriprice

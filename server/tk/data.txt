@@ -5,5 +5,4 @@ The CJ카드,signal3
 삼성 S클래스카드,signal8
 하나 Yes OK Saver,signal9
 하나 줄리엣카드 & Yes 4u shopping,signal11
-KB Star,signal12
 이마트 KB카드,signal13
